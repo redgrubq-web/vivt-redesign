@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ВИВТ — Воронежский институт высоких технологий</title>
+  <meta name="description" content="Воронежский институт высоких технологий — колледж, бакалавриат, магистратура и аспирантура. Индивидуальная траектория, практика в компаниях-партнёрах, сертификация вендоров.">
+  <meta name="theme-color" content="#1d1d1b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Golos+Text:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<!-- Фиксированная правая рейка -->
+<aside class="rail" aria-label="Быстрые действия">
+  <a class="rail__news" href="#news" aria-label="Перейти к новостям">
+    <span class="rail__icon" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+    </span>
+    <span class="rail__label">Новости</span>
+  </a>
+  <button class="rail__menu" type="button" data-menu-open aria-expanded="false" aria-controls="menu">
+    <span class="rail__icon rail__icon--burger" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="rail__label" data-menu-label>Меню</span>
+  </button>
+</aside>
+
+<!-- Полноэкранное меню -->
+<div class="menu" id="menu" aria-hidden="true">
+  <button class="menu__close" type="button" aria-label="Закрыть меню">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <div class="menu__inner">
+    <nav class="menu__nav" aria-label="Главное меню">
+      <a class="menu__link" href="#about"><span>01</span>Институт<svg class="menu__arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      <a class="menu__link" href="#education"><span>02</span>Образование<svg class="menu__arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      <a class="menu__link" href="#life"><span>03</span>Возможности<svg class="menu__arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      <a class="menu__link" href="#news"><span>04</span>Новости<svg class="menu__arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      <a class="menu__link" href="#admission"><span>05</span>Поступающим<svg class="menu__arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      <a class="menu__link" href="#contacts"><span>06</span>Контакты<svg class="menu__arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+    </nav>
+    <aside class="menu__aside" aria-label="Контакты и приёмная комиссия">
+      <div class="menu__block">
+        <p class="menu__caption">Приёмная комиссия</p>
+        <a class="menu__phone" href="tel:88005556054">8 800 555 60 54</a>
+        <a class="menu__mail" href="mailto:epk@vivt.ru">epk@vivt.ru</a>
+      </div>
+      <div class="menu__block">
+        <p class="menu__caption">Адрес</p>
+        <p class="menu__text">394043, г. Воронеж,<br>ул. Ленина, 73а</p>
+      </div>
+      <div class="menu__block">
+        <p class="menu__caption">Мы в сети</p>
+        <div class="menu__socials">
+          <a href="https://vk.com/vivtvrn" target="_blank" rel="noopener">VK</a>
+          <a href="https://t.me/vivtvrn" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://rutube.ru/" target="_blank" rel="noopener">Rutube</a>
+          <a href="https://dzen.ru/" target="_blank" rel="noopener">Дзен</a>
+        </div>
+      </div>
+      <p class="menu__note">Пн–Пт, 9:00–18:00<br>Звонок по России бесплатный</p>
+    </aside>
+  </div>
+</div>
+
+<div class="page">
+
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="#main" aria-label="ВИВТ — на главную">
+        <img src="assets/vivt-logo.svg" alt="ВИВТ — Воронежский институт высоких технологий" width="179" height="44">
+      </a>
+      <div class="site-header__meta">
+        <a class="site-header__phone" href="tel:88005556054">
+          <strong>8 800 555 60 54</strong>
+          <span>Звонок по России бесплатный</span>
+        </a>
+        <nav class="site-header__links" aria-label="Сервисы">
+          <a href="#education">Абитуриенту</a>
+          <a href="#contacts">Сведения об образовательной организации</a>
+          <a href="https://vivt.ru/lk" target="_blank" rel="noopener">Войти</a>
+        </nav>
+        <a class="btn btn--dark btn--small site-header__cta" href="#admission">Подать документы</a>
+        <button class="nav-toggle" type="button" data-menu-open aria-expanded="false" aria-controls="menu">
+          <span class="nav-toggle__lines" aria-hidden="true"><i></i><i></i></span>
+          Меню
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Герой -->
+    <section class="hero">
+      <div class="shell">
+        <div class="hero__top">
+          <p class="eyebrow">Воронеж · основан в 1992</p>
+          <p class="hero__tag">АНОО ВО «Воронежский институт<br>высоких технологий»</p>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__line"><span class="hero__rise"><span class="hero__word">САМЫЙ</span> <em>молодой</em></span></span>
+          <span class="hero__line"><span class="hero__rise"><span class="hero__word">СРЕДИ ЛУЧШИХ</span><span class="hero__dot">.</span></span></span>
+        </h1>
+
+        <div class="hero__bottom">
+          <p class="hero__lead">Образовательный холдинг, который выстраивает индивидуальную профессиональную траекторию каждому студенту. Образование и трудоустройство идут рядом — с первого курса до оффера.</p>
+          <div class="hero__actions">
+            <a class="btn btn--dark" href="#admission">Подать документы <span aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="#contacts">Приёмная комиссия</a>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <figure class="hero__art">
+            <svg class="terminal" viewBox="0 0 620 430" role="img" aria-label="Иллюстрация: окно с вопросом «Поступаешь в ВИВТ?» и кнопками «Да» и «Конечно»">
+              <g class="terminal__handles" fill="#fff" stroke="#1d1d1b" stroke-width="1.5">
+                <rect x="28" y="44" width="9" height="9"></rect>
+                <rect x="522" y="44" width="9" height="9"></rect>
+                <rect x="28" y="352" width="9" height="9"></rect>
+                <rect x="522" y="352" width="9" height="9"></rect>
+              </g>
+              <rect x="32" y="48" width="495" height="300" fill="none" stroke="#c9c7bf" stroke-width="1.2" stroke-dasharray="4 7"></rect>
+
+              <rect x="108" y="76" width="330" height="210" fill="#f2f1ed" stroke="#1d1d1b" stroke-width="1.6"></rect>
+              <rect x="64" y="106" width="392" height="244" fill="#fff" stroke="#1d1d1b" stroke-width="2"></rect>
+              <line x1="64" y1="142" x2="456" y2="142" stroke="#1d1d1b" stroke-width="2"></line>
+              <rect x="80" y="118" width="10" height="10" fill="none" stroke="#1d1d1b" stroke-width="1.4"></rect>
+              <rect x="96" y="118" width="10" height="10" fill="none" stroke="#1d1d1b" stroke-width="1.4"></rect>
+              <rect x="112" y="118" width="10" height="10" fill="none" stroke="#1d1d1b" stroke-width="1.4"></rect>
+
+              <text class="terminal__title" x="86" y="184">Поступаешь</text>
+              <text class="terminal__title" x="86" y="212">в ВИВТ?</text>
+
+              <g class="terminal__btn">
+                <rect x="86" y="238" width="82" height="34" fill="#fff" stroke="#1d1d1b" stroke-width="1.6"></rect>
+                <text x="110" y="260">Да</text>
+              </g>
+              <g class="terminal__btn">
+                <rect x="180" y="238" width="132" height="34" fill="#ff00aa" stroke="#1d1d1b" stroke-width="1.6"></rect>
+                <text x="204" y="260">Конечно</text>
+              </g>
+
+              <g class="terminal__heart" fill="#ff00aa">
+                <rect x="392" y="222" width="7" height="7"></rect><rect x="399" y="222" width="7" height="7"></rect>
+                <rect x="413" y="222" width="7" height="7"></rect><rect x="420" y="222" width="7" height="7"></rect>
+                <rect x="385" y="229" width="49" height="7"></rect>
+                <rect x="392" y="236" width="35" height="7"></rect>
+                <rect x="399" y="243" width="21" height="7"></rect>
+                <rect x="406" y="250" width="7" height="7"></rect>
+              </g>
+
+              <path class="terminal__cursor" d="M470 316l0 42 10-10 7 16 8-3-7-16 14-1z" fill="#fff" stroke="#1d1d1b" stroke-width="2"></path>
+
+              <g class="terminal__badge">
+                <rect x="64" y="300" width="148" height="34" fill="#1d1d1b"></rect>
+                <text x="80" y="322">с 1992 года</text>
+              </g>
+            </svg>
+            <figcaption>Выбор, который работает на карьеру</figcaption>
+          </figure>
+
+          <div class="hero__statement">
+            <p class="eyebrow">Больше чем институт</p>
+            <h2>Колледж и вуз<br><em>на одной</em> площадке</h2>
+            <p>Практика в компаниях-партнёрах, сертификация ведущих вендоров, проекты в IT-инкубаторе и индивидуальная траектория — ещё во время учёбы.</p>
+            <a class="arrow-link" href="#about">Узнать о ВИВТ <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <ul class="facts">
+          <li>Индивидуальная профессиональная траектория каждого студента</li>
+          <li>Практика в компаниях-партнёрах с 3–4 курса</li>
+          <li>Сертификация ведущих вендоров включена в обучение</li>
+          <li>Студенческий IT-инкубатор и проектная деятельность</li>
+          <li>Майноры, АРТ-программы, спорт и волонтёрство</li>
+          <li>Колледж → вуз без ЕГЭ по внутренним испытаниям</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Новости -->
+    <section class="news" id="news">
+      <div class="shell">
+        <div class="section-head">
+          <h2 class="section-head__title reveal reveal--clip">Новости</h2>
+          <a class="arrow-link" href="https://vivt.ru/news" target="_blank" rel="noopener">Все новости <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="news__grid reveal">
+          <a class="news-card" href="https://vivt.ru/news" target="_blank" rel="noopener">
+            <div class="news-card__media">
+              <img src="assets/news-1.jpg" alt="Участники соревнований по классическому жиму с дипломами" loading="lazy" width="1207" height="549">
+            </div>
+            <div class="news-card__meta"><time datetime="2026-10-21">21.10.2026</time><span>Спорт</span></div>
+            <h3 class="news-card__title">Соревнования по классическому жиму</h3>
+          </a>
+          <a class="news-card" href="https://vivt.ru/news" target="_blank" rel="noopener">
+            <div class="news-card__media news-card__media--right">
+              <img src="assets/news-2.jpg" alt="Ольга Викторовна Курочкина, заместитель руководителя департамента по работе со студентами" loading="lazy" width="1920" height="1080">
+            </div>
+            <div class="news-card__meta"><time datetime="2026-10-21">21.10.2026</time><span>ВИВТ медиа</span></div>
+            <h3 class="news-card__title">Интервью с преподавателями: О. В. Курочкина</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Цифры -->
+    <section class="stats" id="about">
+      <div class="shell stats__inner">
+        <div class="stats__head">
+          <p class="eyebrow eyebrow--light">Цифры и факты</p>
+          <h2 class="stats__title reveal reveal--clip">ЦИФРЫ<br>И ФАКТЫ</h2>
+        </div>
+        <div class="stats__grid">
+          <article class="stat reveal">
+            <span class="stat__num">1992</span>
+            <p>год основания института</p>
+          </article>
+          <article class="stat reveal">
+            <span class="stat__num">04</span>
+            <p>ступени образования: колледж, бакалавриат, магистратура, аспирантура</p>
+          </article>
+          <article class="stat reveal">
+            <span class="stat__num">10<sup>+</sup></span>
+            <p>образовательных программ под запросы рынка труда</p>
+          </article>
+          <article class="stat reveal">
+            <span class="stat__num">05</span>
+            <p>направлений бакалавриата — от IT до техносферной безопасности</p>
+          </article>
+        </div>
+        <div class="stats__foot reveal">
+          <p>«Самый молодой среди лучших» — ежегодно ВИВТ укрепляет позиции на образовательном рынке и сближается с работодателями.</p>
+          <a class="arrow-link arrow-link--light" href="#education">Смотреть образование <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- О ВИВТ -->
+    <section class="about">
+      <div class="shell about__grid">
+        <aside class="about__aside">
+          <p class="eyebrow">О ВИВТ</p>
+          <p class="about__aside-note">Динамично развивающийся<br>образовательный холдинг</p>
+        </aside>
+        <div class="about__content">
+          <h2 class="about__statement reveal reveal--clip">Образование и трудоустройство <em>идут рядом</em></h2>
+          <div class="about__copy reveal">
+            <p>ВИВТ сочетает фундаментальную подготовку специалистов с инновационными достижениями науки, поощряя развитие гармоничной творческой личности.</p>
+            <p>Мы максимально сближаемся с рынком труда: расширяем партнёрскую базу и корректируем образовательные программы под запросы работодателей. Студентам не нужно искать место практики — его предоставляет институт.</p>
+          </div>
+
+          <div class="accs reveal">
+            <details class="acc" name="vivt-principles">
+              <summary>
+                <span class="acc__num">01</span>
+                <span class="acc__title">Индивидуальная траектория</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="acc__body"><div><p>Обучение строится «от общего к частному»: сначала фундаментальные дисциплины, затем специализированные. Майноры, проекты и форматы позволяют собрать свою программу.</p></div></div>
+            </details>
+            <details class="acc" name="vivt-principles">
+              <summary>
+                <span class="acc__num">02</span>
+                <span class="acc__title">Практика рядом с рынком труда</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="acc__body"><div><p>На 3–4 курсе студенты проходят учебную и производственную практику в компаниях-партнёрах. Успешное решение рабочих задач — приглашение на собеседование.</p></div></div>
+            </details>
+            <details class="acc" name="vivt-principles">
+              <summary>
+                <span class="acc__num">03</span>
+                <span class="acc__title">Сертификация вендоров</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="acc__body"><div><p>Сертификация ведущих вендоров включена в образовательный процесс: студенты получают дополнительные компетенции и подтверждение квалификации к диплому.</p></div></div>
+            </details>
+            <details class="acc" name="vivt-principles">
+              <summary>
+                <span class="acc__num">04</span>
+                <span class="acc__title">Колледж → вуз без ЕГЭ</span>
+                <span class="acc__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="acc__body"><div><p>Выпускники колледжа ВИВТ могут продолжить обучение в вузе без ЕГЭ — достаточно пройти внутренние вступительные испытания.</p></div></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Образование: горизонтальная scroll-driven секция -->
+    <section class="edu" id="education">
+      <div class="shell edu__intro">
+        <div class="edu__intro-label">
+          <p class="eyebrow">Образование</p>
+          <p class="edu__intro-note">4 ступени · одна траектория</p>
+        </div>
+        <div class="edu__intro-main">
+          <h2 class="reveal reveal--clip">Выбери своё образование</h2>
+          <div class="edu__intro-row">
+            <p class="reveal">Колледж, бакалавриат, магистратура и аспирантура. Четыре уровня — одна траектория: листайте, чтобы сравнить.</p>
+            <a class="arrow-link" href="https://vivt.ru/vo" target="_blank" rel="noopener">Информация о приёме <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu__pin">
+        <div class="edu__sticky">
+          <div class="edu__viewport" role="region" aria-label="Уровни образования">
+            <div class="edu__track">
+
+              <article class="edu__panel edu__panel--light">
+                <div class="edu__panel-inner">
+                  <header class="edu__panel-head">
+                    <span class="edu__num">01</span>
+                    <span class="edu__kind">Среднее профессиональное образование</span>
+                    <span class="edu__hint" aria-hidden="true">Скролльте вниз ↓</span>
+                  </header>
+                  <div class="edu__panel-body">
+                    <div class="edu__main">
+                      <h3>Колледж</h3>
+                      <p>Компетентные специалисты среднего звена под запросы работодателей: проекты, кейсы, мастер-классы и практика в компаниях-партнёрах. Диплом государственного образца.</p>
+                    </div>
+                    <div class="edu__programs">
+                      <p class="edu__programs-label">Что получаете</p>
+                      <ul class="chips">
+                        <li>Диплом гос. образца</li>
+                        <li>Практика у партнёров</li>
+                        <li>Вуз без ЕГЭ</li>
+                        <li>После 9 и 11 класса</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <footer class="edu__panel-foot">
+                    <a class="arrow-link arrow-link--big" href="https://college.vivt.ru/" target="_blank" rel="noopener">Направления колледжа <span aria-hidden="true">→</span></a>
+                    <span class="edu__panel-note">Выпускники могут продолжить обучение в вузе ВИВТ</span>
+                  </footer>
+                  <span class="edu__watermark" aria-hidden="true">01</span>
+                </div>
+              </article>
+
+              <article class="edu__panel edu__panel--magenta">
+                <div class="edu__panel-inner">
+                  <header class="edu__panel-head">
+                    <span class="edu__num">02</span>
+                    <span class="edu__kind">Высшее образование · 4 года</span>
+                    <span class="edu__hint" aria-hidden="true">Скролльте вниз ↓</span>
+                  </header>
+                  <div class="edu__panel-body">
+                    <div class="edu__main">
+                      <h3>Бакалавриат</h3>
+                      <p>Фундаментальные знания, профессиональные и гибкие навыки. Программы трансформируются под запросы рынка труда, а на 3–4 курсе студенты проходят практику в компаниях-партнёрах.</p>
+                    </div>
+                    <div class="edu__programs">
+                      <p class="edu__programs-label">Направления</p>
+                      <ul class="chips">
+                        <li>Информатика и вычислительная техника</li>
+                        <li>Информационные системы и технологии</li>
+                        <li>Сервис</li>
+                        <li>Техносферная безопасность</li>
+                        <li>Инноватика</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <footer class="edu__panel-foot">
+                    <a class="arrow-link arrow-link--big" href="https://vivt.ru/vo" target="_blank" rel="noopener">Направления бакалавриата <span aria-hidden="true">→</span></a>
+                    <span class="edu__panel-note">Диплом с квалификацией «бакалавр»</span>
+                  </footer>
+                  <span class="edu__watermark" aria-hidden="true">02</span>
+                </div>
+              </article>
+
+              <article class="edu__panel edu__panel--purple">
+                <div class="edu__panel-inner">
+                  <header class="edu__panel-head">
+                    <span class="edu__num">03</span>
+                    <span class="edu__kind">Высшее образование · 2 года</span>
+                    <span class="edu__hint" aria-hidden="true">Скролльте вниз ↓</span>
+                  </header>
+                  <div class="edu__panel-body">
+                    <div class="edu__main">
+                      <h3>Магистратура</h3>
+                      <p>Возможность углубиться в выбранное направление или изменить профессиональную траекторию. Фундамент для научно-исследовательской и управленческой карьеры.</p>
+                    </div>
+                    <div class="edu__programs">
+                      <p class="edu__programs-label">Направления</p>
+                      <ul class="chips">
+                        <li>Сети ЭВМ и телекоммуникации</li>
+                        <li>Киберфизические системы и ИИ</li>
+                        <li>Искусственный интеллект в цифровой экономике</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <footer class="edu__panel-foot">
+                    <a class="arrow-link arrow-link--big" href="https://vivt.ru/vo" target="_blank" rel="noopener">Направления магистратуры <span aria-hidden="true">→</span></a>
+                    <span class="edu__panel-note">Диплом с квалификацией «магистр»</span>
+                  </footer>
+                  <span class="edu__watermark" aria-hidden="true">03</span>
+                </div>
+              </article>
+
+              <article class="edu__panel edu__panel--dark">
+                <div class="edu__panel-inner">
+                  <header class="edu__panel-head">
+                    <span class="edu__num">04</span>
+                    <span class="edu__kind">Подготовка научных кадров</span>
+                    <span class="edu__hint" aria-hidden="true">Скролльте вниз ↓</span>
+                  </header>
+                  <div class="edu__panel-body">
+                    <div class="edu__main">
+                      <h3>Аспирантура</h3>
+                      <p>Научный и образовательный компоненты, педагогическая практика и собственное исследование. Завершение — защита диссертации на соискание степени кандидата наук.</p>
+                    </div>
+                    <div class="edu__programs">
+                      <p class="edu__programs-label">Направления</p>
+                      <ul class="chips">
+                        <li>Системный анализ, управление и обработка информации</li>
+                        <li>Управление в организационных системах</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <footer class="edu__panel-foot">
+                    <a class="arrow-link arrow-link--big" href="https://vivt.ru/vo" target="_blank" rel="noopener">Направления аспирантуры <span aria-hidden="true">→</span></a>
+                    <span class="edu__panel-note">Подготовка научно-педагогических кадров</span>
+                  </footer>
+                  <span class="edu__watermark" aria-hidden="true">04</span>
+                </div>
+              </article>
+
+            </div>
+          </div>
+          <div class="edu__progress" aria-hidden="true"><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Возможности -->
+    <section class="opportunities" id="life">
+      <div class="shell">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow">Студенческая жизнь</p>
+            <h2 class="reveal reveal--clip">Твои возможности в ВИВТ</h2>
+          </div>
+          <a class="arrow-link" href="https://vivt.ru/" target="_blank" rel="noopener">Все сервисы <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="opps reveal">
+          <a class="opp opp--1" href="https://vivt.ru/" target="_blank" rel="noopener">
+            <span class="opp__index">01</span>
+            <img class="opp__icon" src="assets/icon-minor.png" alt="" width="128" height="128" loading="lazy">
+            <div class="opp__text">
+              <h3>Майноры</h3>
+              <p>Практические курсы для развития компетенций студентов</p>
+            </div>
+            <span class="opp__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="opp opp--2" href="https://vivt.ru/" target="_blank" rel="noopener">
+            <span class="opp__index">02</span>
+            <img class="opp__icon" src="assets/icon-art.png" alt="" width="128" height="128" loading="lazy">
+            <div class="opp__text">
+              <h3>АРТ ВИВТ</h3>
+              <p>Обучение через искусство и культуру</p>
+            </div>
+            <span class="opp__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="opp opp--3" href="https://vivt.ru/" target="_blank" rel="noopener">
+            <span class="opp__index">03</span>
+            <img class="opp__icon" src="assets/icon-cooperation.png" alt="" width="128" height="128" loading="lazy">
+            <div class="opp__text">
+              <h3>Сотрудничество</h3>
+              <p>Партнёры и работодатели. Ассоциация выпускников</p>
+            </div>
+            <span class="opp__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="opp opp--4" href="https://vivt.ru/" target="_blank" rel="noopener">
+            <span class="opp__index">04</span>
+            <img class="opp__icon" src="assets/icon-project.png" alt="" width="128" height="128" loading="lazy">
+            <div class="opp__text">
+              <h3>Проекты</h3>
+              <p>Студенческий IT-инкубатор и проектная деятельность</p>
+            </div>
+            <span class="opp__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="opp opp--5" href="https://vivt.ru/" target="_blank" rel="noopener">
+            <span class="opp__index">05</span>
+            <img class="opp__icon" src="assets/icon-volunteer.png" alt="" width="128" height="128" loading="lazy">
+            <div class="opp__text">
+              <h3>Волонтёрство</h3>
+              <p>Волонтёрский центр — флагман студенческого добровольчества региона</p>
+            </div>
+            <span class="opp__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="opp opp--6" href="https://vivt.ru/" target="_blank" rel="noopener">
+            <span class="opp__index">06</span>
+            <img class="opp__icon" src="assets/icon-vendor.png" alt="" width="128" height="128" loading="lazy">
+            <div class="opp__text">
+              <h3>Вендоры</h3>
+              <p>Сертификация ведущих вендоров, включённая в образовательный процесс</p>
+            </div>
+            <span class="opp__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <a class="media-strip reveal" href="https://vivt.ru/" target="_blank" rel="noopener">
+          <div>
+            <p class="eyebrow eyebrow--light">ВИВТ медиа</p>
+            <h3>Медиа-проекты, журнал «ВИВаТ»<br>и интернет-магазин мерча</h3>
+          </div>
+          <span class="media-strip__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Приём -->
+    <section class="admission" id="admission">
+      <div class="shell admission__inner">
+        <div class="admission__head">
+          <p class="eyebrow">Приёмная кампания 2026</p>
+          <h2>Хочешь поступить <em>не как все?</em></h2>
+        </div>
+        <div class="admission__body">
+          <p>Оставь заявку онлайн или позвони в приёмную комиссию — поможем выбрать направление, расскажем о проходных баллах и разберёмся с документами.</p>
+          <div class="admission__actions">
+            <a class="btn btn--dark btn--large" href="https://vivt.ru/epk" target="_blank" rel="noopener">Да, хочу <span aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="https://vivt.ru/epk" target="_blank" rel="noopener">Информация о приёме</a>
+          </div>
+        </div>
+        <div class="admission__contacts">
+          <a href="tel:88005556054">8 800 555 60 54</a>
+          <a href="mailto:epk@vivt.ru">epk@vivt.ru</a>
+          <span>г. Воронеж, ул. Ленина, 73а</span>
+        </div>
+        <span class="admission__watermark" aria-hidden="true">2026</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="shell">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="assets/vivt-logo-white.png" alt="ВИВТ" width="206" height="51" loading="lazy">
+          <p>Воронежский институт высоких технологий — динамично развивающийся образовательный холдинг.</p>
+        </div>
+        <nav class="footer__col" aria-label="Образование">
+          <p class="footer__caption">Образование</p>
+          <a href="#education">Колледж</a>
+          <a href="#education">Бакалавриат</a>
+          <a href="#education">Магистратура</a>
+          <a href="#education">Аспирантура</a>
+          <a href="https://vivt.ru/" target="_blank" rel="noopener">Дополнительное образование</a>
+        </nav>
+        <nav class="footer__col" aria-label="Институт">
+          <p class="footer__caption">Институт</p>
+          <a href="#about">О ВИВТ</a>
+          <a href="https://vivt.ru/" target="_blank" rel="noopener">Руководство</a>
+          <a href="https://vivt.ru/" target="_blank" rel="noopener">Педагогический состав</a>
+          <a href="https://vivt.ru/" target="_blank" rel="noopener">Партнёры и работодатели</a>
+          <a href="https://vivt.ru/" target="_blank" rel="noopener">Вакансии</a>
+        </nav>
+        <div class="footer__col footer__col--contacts">
+          <p class="footer__caption">Контакты</p>
+          <p>394043, г. Воронеж,<br>ул. Ленина, 73а</p>
+          <a href="tel:+74732020420">+7 (473) 202-04-20</a>
+          <a href="tel:88005556054">8 800 555 60 54</a>
+          <a href="mailto:info@vivt.ru">info@vivt.ru</a>
+          <a href="mailto:epk@vivt.ru">epk@vivt.ru</a>
+        </div>
+      </div>
+
+      <div class="footer__socials">
+        <a href="https://vk.com/vivtvrn" target="_blank" rel="noopener">VK</a>
+        <a href="https://t.me/vivtvrn" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://rutube.ru/" target="_blank" rel="noopener">Rutube</a>
+        <a href="https://dzen.ru/" target="_blank" rel="noopener">Дзен</a>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 1992–2026 АНОО ВО «Воронежский институт высоких технологий». Лицензия № 1636.</p>
+        <p><a href="https://vivt.ru/" target="_blank" rel="noopener">Сведения об образовательной организации</a> · <a href="https://vivt.ru/" target="_blank" rel="noopener">Политика обработки персональных данных</a></p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
